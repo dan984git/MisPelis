@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* ESTILOS GENERALES */
+body {
+  background: #282c34;
+  font-family: 'Inter', sans-serif;
+  font-size: calc(7px + 2vmin);
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
+  color: white;
+  box-sizing: inherit;
+  position: relative;
+}
+
+.layout {
+  width: 100%;
+  min-height: auto;
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "content content content lateral"
+    "content content content lateral"
+    "footer footer footer footer";
+  grid-template-rows: 100px 70px auto auto 70px;
+  grid-template-columns: 25% 25% 30% 20%;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(26, 26, 26, 0.3);
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 10px rgba(26, 26, 26, 1);
+  background-color: #191b1e;
+}
+
+@media (max-width: 1250px) {
+  .layout {
+    grid-template-areas:
+      "header header header header"
+      "nav nav nav nav"
+      "content content content content"
+      "lateral lateral lateral lateral"
+      "footer footer footer footer";
+    grid-template-rows: 100px 70px auto auto 70px;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .lateral {
+    grid-area: lateral;
+    border-left: 0px solid white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .nav a {
+    display: block;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    font-size: 16px !important;
+  }
+
+  .App-logo {
+    height: 50px !important;
+  }
+}
+
+/* ESTILOS CABECERA */
+
+.header {
+  background: #191b1e;
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-logo {
+  width: auto;
+  height: 75px;
+  background: #191b1e;
+}
+
+/* ESTILOS BARRA NAVEGACION */
+.nav {
+  width: 100%;
+  background: linear-gradient(0deg, #282c34 10%, #191b1e 100%);
+  grid-area: nav;
+}
+
+.nav>ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0px;
+}
+
+.nav li {
+  padding: 0px 10px 0px 10px;
+}
+
+.nav a {
+  display: block;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: inter, sans-serif;
+  transition: all 300ms;
+  color: white;
+}
+
+.nav a:hover {
+  transform: scale(1.2, 1.2);
+  filter: drop-shadow(0 0 10px #ffffff);
+}
+
+
+/* ESTILOS CONTENIDO */
+.content {
+  background: #282c34;
+  grid-area: content;
+  margin: 10px 0px 20px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: inherit;
+}
+
+.peli-item {
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  margin: 20px 20px 20px 20px;
+  width: 350px;
+  height: 400px;
+  max-width: 350px;
+  max-height: 400px;
+  display: grid;
+  grid-template-areas:
+    "card-content"
+    "card-body";
+  grid-template-rows: 75% 25%;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.card-content {
+  grid-area: card-content;
+  color: black;
+}
+
+.card-body {
+  padding: 10px 10px 10px 10px;
+  grid-area: card-body;
+  display: grid;
+  grid-template-areas:
+    "card-title card-tile"
+    "card-description card-footer";
+  height: 100%;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 65% 35%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(180deg, #ffffff00 0%, #282c34 80%);
+}
+
+.card-title {
+  grid-area: card-title;
+  grid-column: 1 / 3;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0px;
+  text-align: left;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.card-description {
+  grid-area: card-description;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-start;
+  margin: 0px;
+  text-align: left;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.card-footer {
+  grid-area: card-footer;
+  display: flex;
+  grid-row: 2;
+  grid-column: 2;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  margin: 0px;
+  font-size: 16px;
+}
+
+.description {
+  color: rgb(255, 255, 255);
+  margin: 0px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.content button {
+  background: linear-gradient(0deg, #3d4047 10%, #191b1e 100%);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  margin: 5px;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: all 300ms;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit:hover {
+  background: rgb(255, 182, 86);
+  color: black;
+}
+
+.delete:hover {
+  background: rgb(255, 86, 86);
+  color: black;
+}
+
+/* ESTILOS BARRA LATERAL */
+.lateral {
+  background: #282c34;
+  grid-area: lateral;
+  border-left: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lateral>div {
+  max-width: 500px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 10px 10px 40px 10px;
+  padding: 20px;
+  padding-top: 10px;
+  background: linear-gradient(0deg, #282c34 10%, #1e2124 100%);
+  border-radius: 10px;
+}
+
+.lateral input[type="text"],
+.lateral textarea {
+  display: block;
+  width: 90%;
+  max-width: 90%;
+  max-height: 400px;
+  margin: 0 auto;
+  margin: 10px 0px 10px 0px;
+  padding: 12px;
+  border-radius: 5px;
+  background: #282c34;
+  color: white;
+  opacity: 4;
+  outline: 0;
+  border-color: transparent;
+}
+
+.lateral textarea {
+  resize: none;
+  height: 150px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container .icon-search {
+  font-size: 22px;
+  color: white;
+  margin: 10px 0px 10px 0px;
+  position: absolute;
+  left: 12px;
+}
+
+.btnInput {
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #191b1e;
+  color: white;
+}
+
+.btnInput:active {
+  background-color: #282c34;
+  color: #ffffff;
+}
+
+.btnSave {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #191b1e;
+  color: white;
+}
+
+.btnSave:active {
+  background-color: #282c34;
+  color: #ffffff;
+}
+
+.input-container>input {
+  padding-left: 40px !important;
+}
+
+.errorMsg {
+  text-align: left;
+  color: lightcoral;
+  font-size: 12px;
+  margin: 0px;
+  display: none;
+}
+
+.inpMovie:invalid[focused="true"]+span {
+  display: block;
+}
+
+.inpMovieImage:invalid[focused="true"]+span {
+  display: block;
+}
+
+/* ESTILOS FOOTER */
+.footer {
+  background: linear-gradient(180deg, #282c34 10%, #191b1e 100%);
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* ESTILOS MODAL */
+.modalEditCont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #191b1ee8;
+  z-index: 10;
+}
+
+.editMovie {
+  max-width: 500px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 10px 10px 10px 10px;
+  padding: 20px;
+  background: linear-gradient(0deg, #282c34 10%, #1e2124 100%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.editMovie input[type="text"],
+.editMovie textarea {
+  display: block;
+  width: 90%;
+  max-width: 90%;
+  max-height: 400px;
+  margin: 0 auto;
+  margin: 10px 0px 10px 0px;
+  padding: 12px;
+  border-radius: 5px;
+  background: #282c34;
+  color: white;
+  opacity: 4;
+  outline: 0;
+  border-color: transparent;
+}
+
+.editMovie textarea {
+  resize: none;
+  height: 150px;
+}
+
+.editMovie>h3{
+  margin: 10px;
+}
+
+.modalBtn>input {
+  margin: 10px;
+}

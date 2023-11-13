@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1697686768200,
+    "title": "Once Upon a Time in... Hollywood",
+    "image": "https://i.pinimg.com/474x/e7/b6/70/e7b670c72cd5a8a683dc9f6c05db801e.jpg",
+    "description": "The 9th film by Quentin Tarantino"
+  },
+  {
+    "id": 1697686768201,
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "image": "https://i.pinimg.com/originals/15/e1/8e/15e18e1aa97f2195e5e715268cce6dfe.jpg",
+    "description": "In Theaters September 3"
+  },
+  {
+    "id": 1697686768202,
+    "title": "IronMan",
+    "image": "https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/170592/170592.jpg",
+    "description": "Robert Downey Jr., Terrence Howard, etc."
+  },
+  {
+    "id": 1697686768203,
+    "title": "Avatar",
+    "image": "https://i0.wp.com/hipertextual.com/wp-content/uploads/2016/10/avatar-poster-01-600x886.jpg?resize=600%2C886&quality=50&strip=all&ssl=1",
+    "description": "From the Director of 'TITANIC'"
+  },
+  {
+    "id": 1697686768204,
+    "title": "Joker",
+    "image": "https://revista.achap.cl/wp-content/uploads/2019/12/JOKER-691x1024.jpg",
+    "description": "Put on a Happy Face"
+  },
+  {
+    "id": 1697686768205,
+    "title": "Avengers Endgame",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_792544-MLM47563346139_092021-O.webp",
+    "description": "Marvel Studios"
+  }
+]
